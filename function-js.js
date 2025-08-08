@@ -66,3 +66,53 @@ function odd_even(num) {
 
 const oddEven = odd_even(150);
 console.log("5. The number is", oddEven);
+
+// ------------------array_looping ----------------
+
+// task-1
+const colors = ["red", "blue", "green", "yellow", "orange"];
+
+console.log("The colors are:", colors);
+
+let rev_colors = [];
+for (const color of colors) {
+  rev_colors.unshift(color);
+}
+console.log("The reversed colors are:", rev_colors);
+
+// task-2
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let even_numbers = [];
+for (const number of numbers) {
+  if (number % 2 === 0) {
+    even_numbers.push(number);
+  }
+}
+console.log("The even numbers are:", even_numbers);
+
+// tast-3
+var names = ["Tom", "Tim", "Tin", "Tik"];
+var fullName = "";
+for (var name of names) {
+  fullName = fullName.concat(name);
+}
+console.log(fullName);
+
+// task-4
+const statement = "I am a hard working person";
+console.log("The statement is:", statement);
+let words = statement.split(" ").reverse();
+let reverse_statement = "";
+for (const word of words) {
+  reverse_statement += word + " ";
+}
+console.log("The reverse statement is:", reverse_statement);
+
+// task-5
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let array2 = [...array];
+console.log("The copy array of", array, "is:", array2);
+
+array2[0] = 100;
+console.log("The modified copy array is:", array2, array);
